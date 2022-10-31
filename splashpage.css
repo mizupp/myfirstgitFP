@@ -1,5 +1,6 @@
-/* Style the video: 100% width and height to cover the entire window */
+
 #myVideo {
+
     position: fixed;
     right: 0;
     bottom: 0;
@@ -11,24 +12,43 @@
   .content {
     position: fixed;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(rgba(146, 23, 23, 0.537), rgba(0, 0, 0, 0.537));
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
+    text-align: center;
   }
   
   /* Style the button used to pause/play the video */
   #myBtn {
-    width: 200px;
+    width: 100px; height: 100px;
     font-size: 18px;
     padding: 10px;
     border: none;
     background: #000;
     color: #fff;
     cursor: pointer;
+    border-radius: 50%;
+    display: inline-block;
   }
   
   #myBtn:hover {
-    background: #ddd;
+    background: rgba(221, 221, 221, 0.248);
+    transition: 0.3s;
     color: black;
+    
   }
+
+
+  .arrow {
+    border: solid rgb(255, 255, 255);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 6px;
+  }
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  /* Mizna Splash */

@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="splashpage.css">
     <title>Document</title>
 </head>
 <body>
     <!-- The video -->
 <video autoplay muted loop id="myVideo">
-    <source src="rain.mp4" type="video/mp4">
+    <source src="misc/earth.mp4" type="video/mp4">
   </video>
-  
-  <!-- Optional: some overlay text to describe the video -->
+  <!-- #wrapink id is being used in script below. The script can apply the code onto the where the "wrapink" id is. The "ink dot stain" mouseover script effect will only appear on items above this div hence why I have placed it at the top.-->
+<div id = "wrapink"></div>
+
+<!--"middle" class allows the whole page to be covered; it has a width of 100% and a height of 100%. I wanted my work to be centered on the Splash page hence why I have another "fixingmiddle" class; this class also has a fixed position. -->
+		    <div class="middle fixingmiddle">
+<!--"insidemiddle" class determines the font size of my h2. Through media queries on my splashpage stylesheet this changes size. -->
+             <div class="insidemiddle">
+              <h2>M<i>IZ</i><i>N</i>A U<i>PP</i>AL</h2>
+<!--This link has several classes. The "ajourney" class determines the style of the text. It also has the classes from the earlier divs still affecting it therefore it stays in the middle of the page. "textanimation" class is for the typewriting animation. "fadingmiznapages" classes is for the fade effect; the script is written in "fading.js"-->
+				 <a class = "ajourney textanimation fadingmiznapages" href="index2.html">View my journey...</a>
+            </div>	  
+		</div>
   <div class="content">
-    <h1>Heading</h1>
-    <p>Lorem ipsum...</p>
-    <!-- Use a button to pause/play the video with JavaScript -->
-    <button id="myBtn" onclick="myFunction()">Pause</button>
-  </div>
+    <h1>Start your journey</h1>
+    <img>
+    <p id="myBtn"><i class="arrow down"> </i></p>
+    
+</div>
 </body>
 </html>
