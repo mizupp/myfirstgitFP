@@ -18,18 +18,18 @@ html, body {
   
   .earth {
     transform-style: preserve-3d;
-    max-width: 600px;
-    max-height: 600px;
+    min-width: 600px;
+    min-height: 600px;
     border-radius: 50%;
-    object-fit: cover;
     position: absolute;
-    width: 50%;
-    height: 50%;
+
     background: linear-gradient(rgba(17, 7, 7, 0.847),rgba(10, 8, 8, 0.808)),
     url(misc/earthimage.jpg ) repeat-x;
     background-size: cover;
     animation: rotate 2s infinite linear;
     box-shadow: -80px -15px 80px 10px rgba(0,0,0,.9) inset, -10px 0px 15px -7px #95650459;
+    object-fit: cover;
+
   }
   
   
