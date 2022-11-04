@@ -1,77 +1,12 @@
-$items: 4;
-$animation-time: 4s;
-$transition-time: 0.5s;
-$scale: 20%;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@700&family=Source+Serif+Pro:wght@700&display=swap');
 
-$total-time: ($animation-time * $items);
-$scale-base-1: (1 + $scale / 100%);
-
-.slideshow {
-  position: absolute;
-  width: 100vw;
+body {
+  background: linear-gradient(rgba(200, 36, 36, 0.215),rgba(66, 66, 35, 0.663)),
+  url(misc/earthimage.jpg) center/cover;
+  overflow-x:hidden;
+  overflow-y:hidden;
   height: 100vh;
-  overflow: hidden;
 }
-
-.slideshow-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: no-repeat 50% 50%;
-  background-size: cover;
-  animation-name: kenburns;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: $total-time;
-  opacity: 1;
-  transform: scale($scale-base-1);
-
-  @for $i from 1 through $items {
-    &:nth-child(#{$i}) {
-      animation-name: kenburns-#{$i};
-      z-index: ($items - $i);
-    }
-  }
-}
-
-@for $i from 1 through $items {
-  @keyframes kenburns-#{$i} {
-    $animation-time-percent: percentage($animation-time / $total-time);
-    $transition-time-percent: percentage($transition-time / $total-time);
-    
-    $t1: ($animation-time-percent * ($i - 1) - $transition-time-percent / 2);
-    $t2: ($animation-time-percent * ($i - 1) + $transition-time-percent / 2);
-    @if($t1 < 0%) { $t1: 0%; }
-    @if($t2 < 0%) { $t2: 0%; }
-
-    $t3: ($animation-time-percent * ($i) - $transition-time-percent / 2);
-    $t4: ($animation-time-percent * ($i) + $transition-time-percent / 2);
-    @if($t3 > 100%) { $t3: 100%; }
-    @if($t4 > 100%) { $t4: 100%; }
-
-    $t5: (100% - $transition-time-percent / 2);
-    $t6: (($t4 - $t1) * 100% / $t5);
-
-    #{$t1} { opacity: 1; transform: scale($scale-base-1); }
-    #{$t2} { opacity: 1; }
-    #{$t3} { opacity: 1; }
-    #{$t4} { opacity: 0; transform: scale(1); }
-    
-    @if($i != $items) {
-      100% { opacity: 0; transform: scale($scale-base-1); }
-    }
-    
-    @if($i == 1) {
-      $scale-plus: ($scale * (100% - $t5) / $t4);
-      $scale-plus-base-1: (1 + ($scale + $scale-plus) / 100%);
-    
-      #{$t5} { opacity: 0; transform: scale($scale-plus-base-1); }
-      100% { opacity: 1; }
-    }
-  }
-}
-
-
 
 h1 {
   position: absolute;
@@ -80,27 +15,50 @@ h1 {
   transform: translate3d(-50%, -50%, 0);
   z-index: 99;
   text-align: center;
-  font-family: Raleway, sans-serif;
+  font-family: 'Source Serif Pro', serif;
   font-weight: 300;
   text-transform: uppercase;
   background-color: rgba(255,255,255,.75);
   box-shadow: 0 1em 2em -1em rgba(0,0,0,.5);
   padding: 1em 2em;
   line-height: 1.5;
-  
-  small {
-    display: block;
-    text-transform: lowercase;
-    font-size: .7em;
-    
-    /* &:first-child {
-      border-bottom: 1px solid rgba(0,0,0,.25);
-      padding-bottom: .5em;
-    }
-    
-    &:last-child {
-      border-top: 1px solid rgba(0,0,0,.25);
-      padding-top: .5em;
-    } */
-  }
+}
+
+.boxText{
+    background-color: rgba(116, 9, 75, 0.348);
+    border-radius: 10px;
+}
+
+.caro {
+    box-shadow: 0 2px 8px 0 rgba(210, 226, 35, 0.521);
+    height: 90%;
+    width: 90%;
+}
+
+.SnS {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 5em;
+}
+h1:hover{
+    color:white;
+    transition:0.4s;
+}
+h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    color: white;
+}
+h2:hover{
+    color:black;
+    transition:0.4s;
 }
