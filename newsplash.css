@@ -15,6 +15,29 @@ html, body {
     opacity: 0.8;
   }
 
+  .textadd{
+    position:relative;
+    z-index:1;
+    justify-content: right;
+  }
+
+  p{
+    text-align: center;
+    text-shadow:rgb(10, 8, 8);
+    position:relative; 
+    color: white; 
+  }
+
+  a{
+    position:relative; 
+    color: white; 
+    text-decoration: none;
+  }
+
+  a:hover {
+    transition:0.5s;
+    color:rgb(213, 3, 182);
+  }
   .earth {
     transform-style: preserve-3d;
     min-width: 80vh;
@@ -51,7 +74,7 @@ html, body {
   animation: circle 3s infinite;
   clip-path: circle(75%);
   height: 100vh;
-  background: linear-gradient(rgba(225, 193, 193, 0.347),rgb(234, 225, 66)),
+  background: linear-gradient(rgba(255, 0, 212, 0.347),rgb(234, 225, 66)),
   url(misc/earthimage.jpg)
     center/cover;
   overflow: hidden;
@@ -110,36 +133,13 @@ html, body {
 }
 
 
+
 @keyframes circle {
   0% { clip-path: circle(75%); }
   50% { clip-path: circle(25%); }
   100% { clip-path: circle(75%); }
 }
 
-#player-container #play-pause {
-  cursor: pointer;
-  text-indent: -999999px;
-  height:40px;
-  width: 40px;
-  padding: 12px 18px;
-  z-index: -10;
-  position: justify;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMiAyNHYtMjRsMjAgMTItMjAgMTJ6Ii8+PC9zdmc+);
-    background-repeat: no-repeat!important;
-    background-position: center;
-    background-size: 16px;
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:20px;
-  background-color: gainsboro;
-
-}
-.play {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMiAyNHYtMjRsMjAgMTItMjAgMTJ6Ii8+PC9zdmc+);
-}
-.pause {
-   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTAgMjRoLTZ2LTI0aDZ2MjR6bTEwLTI0aC02djI0aDZ2LTI0eiIvPjwvc3ZnPg==)!important;
-}
 
   @keyframes rotate {
     0% {
