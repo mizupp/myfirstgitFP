@@ -1,10 +1,10 @@
 html, body {
-    height: 100vh;
-    background-color: #000;
+    /* height: 100vh; */
+    /* background-color: #000; */
   }
   
   body {
-    background: linear-gradient(rgba(0, 0, 0, 0.347),rgb(10, 8, 8)),
+    background: linear-gradient(rgba(0, 0, 0, 0.215),rgb(234, 227, 11)),
     url(misc/earthimage.jpg)
       center/cover;
     overflow: hidden;
@@ -14,15 +14,59 @@ html, body {
     z-index: -1;
     opacity: 0.8;
   }
-  
-  
+
+
+body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.box {
+  animation: circle 3s infinite;
+  clip-path: circle(75%);
+  height: 100vh;
+  width: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.347),rgb(10, 8, 8)),
+  url(misc/earthimage.jpg)
+    center/cover;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  opacity: 0.8;
+}
+.box:hover {
+  transition: 0.5s;
+  animation: circle 3s infinite;
+  clip-path: circle(95%);
+  height: 100vh;
+  width: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.347),rgb(10, 8, 8)),
+  url(misc/earthimage.jpg)
+    center/cover;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+@keyframes circle {
+  0% { clip-path: circle(75%); }
+  50% { clip-path: circle(25%); }
+  100% { clip-path: circle(75%); }
+}
+
   .earth {
     transform-style: preserve-3d;
-    min-width: 600px;
-    min-height: 600px;
+    min-width: 80vh;
+    min-height: 80vh;
     border-radius: 50%;
     position: absolute;
-
     background: linear-gradient(rgba(17, 7, 7, 0.847),rgba(10, 8, 8, 0.808)),
     url(misc/earthimage.jpg ) repeat-x;
     background-size: cover;
@@ -31,13 +75,24 @@ html, body {
     object-fit: cover;
 
   }
+  @media only screen and (max-width: 500px) {
+    .earth {
+      min-width: 50vh;
+      min-height: 50vh;
+    }
+  }
+  
   
   
   .earth:hover{
     animation: rotate 20s infinite linear;
     background: linear-gradient(rgba(235, 173, 1, 0.356),rgba(219, 214, 214, 0.359)),
     url(misc/earthimage.jpg ) repeat-x; 
-    background-size: cover; }
+    background-size: cover; 
+    transform: scaleZ(50%);
+  }
+  
+
   
   @keyframes rotate {
     0% {
