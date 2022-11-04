@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@700&family=Source+Serif+Pro:wght@700&display=swap');
 html, body {
     height: 100vh;
     /* background-color: #000; */
@@ -15,6 +17,31 @@ html, body {
     opacity: 0.8;
   }
 
+  .textadd{
+    position:relative;
+    z-index:1;
+    text-align: center;
+    font-family: 'Source Serif Pro', serif;  }
+
+  p{
+    text-shadow:rgb(10, 8, 8);
+    position:relative; 
+    color: white; 
+    
+    font-size: 1.5em;
+  }
+
+  a{
+    position:relative; 
+    color: white; 
+    text-decoration: none;
+    
+  }
+
+  a:hover {
+    transition:0.5s;
+    color:rgb(213, 3, 182);
+  }
   .earth {
     transform-style: preserve-3d;
     min-width: 80vh;
@@ -28,6 +55,7 @@ html, body {
     box-shadow: -80px -15px 80px 10px rgba(0,0,0,.9) inset, -10px 0px 15px -7px #95650459;
     object-fit: cover;
     position: absolute;
+    
   }
 
   .earth:hover{
@@ -50,7 +78,27 @@ html, body {
   animation: circle 3s infinite;
   clip-path: circle(75%);
   height: 100vh;
-  background: linear-gradient(rgba(225, 193, 193, 0.347),rgb(234, 225, 66)),
+  background: linear-gradient(rgba(255, 0, 212, 0.347),rgb(234, 225, 66)),
+  url(misc/earthimage.jpg)
+    center/cover;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  opacity: 0.8;
+  position: absolute;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+}
+.box2 {
+  animation: circle 3s infinite;
+  clip-path: circle(30%);
+  height: 100vh;
+  background: linear-gradient(rgba(196, 17, 17, 0.234),rgb(22, 28, 142)),
   url(misc/earthimage.jpg)
     center/cover;
   overflow: hidden;
@@ -87,6 +135,8 @@ html, body {
     left:0px;
     
 }
+
+
 
 @keyframes circle {
   0% { clip-path: circle(75%); }
