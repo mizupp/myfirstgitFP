@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@700&family=Source+Serif+Pro:wght@700&display=swap');
 
 body {
-  background: linear-gradient(rgba(200, 36, 36, 0.215),rgba(66, 66, 35, 0.663)),
+  background: linear-gradient(rgba(171, 55, 152, 0.792),rgba(66, 66, 35, 0.663)),
   url(misc/earthimage.jpg) center/cover;
   overflow-x:hidden;
   overflow-y:hidden;
@@ -30,11 +30,6 @@ font-size: 7vh;
 text-shadow: 2px 2px #d908d2;
 }
 
-/* #khoj:hover{
-  transform: skewY(20deg);
-  transform: skewY(20deg);
-  color:rgba(182, 25, 121, 0.482);
-} */
   
 #erm{
 animation: shimmy 3s infinite;
