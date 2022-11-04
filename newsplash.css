@@ -15,6 +15,37 @@ html, body {
     opacity: 0.8;
   }
 
+  .earth {
+    transform-style: preserve-3d;
+    min-width: 80vh;
+    min-height: 80vh;
+    border-radius: 50%;
+    position: absolute;
+    background: linear-gradient(rgba(17, 7, 7, 0.847),rgba(10, 8, 8, 0.808)),
+    url(misc/earthimage.jpg ) repeat-x;
+    background-size: cover;
+    animation: rotate 2s infinite linear;
+    box-shadow: -80px -15px 80px 10px rgba(0,0,0,.9) inset, -10px 0px 15px -7px #95650459;
+    object-fit: cover;
+
+  }
+
+  .earth:hover{
+    animation: rotate 20s infinite linear;
+    background: linear-gradient(rgba(235, 173, 1, 0.356),rgba(219, 214, 214, 0.359)),
+    url(misc/earthimage.jpg ) repeat-x; 
+    background-size: cover; 
+    transform: scaleZ(50%);
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .earth {
+      min-width: 50vh;
+      min-height: 50vh;
+    }
+  }
+  
+
 .box {
   animation: circle 3s infinite;
   clip-path: circle(75%);
@@ -64,36 +95,7 @@ html, body {
   100% { clip-path: circle(75%); }
 }
 
-  .earth {
-    transform-style: preserve-3d;
-    min-width: 80vh;
-    min-height: 80vh;
-    border-radius: 50%;
-    position: absolute;
-    background: linear-gradient(rgba(17, 7, 7, 0.847),rgba(10, 8, 8, 0.808)),
-    url(misc/earthimage.jpg ) repeat-x;
-    background-size: cover;
-    animation: rotate 2s infinite linear;
-    box-shadow: -80px -15px 80px 10px rgba(0,0,0,.9) inset, -10px 0px 15px -7px #95650459;
-    object-fit: cover;
 
-  }
-
-  .earth:hover{
-    animation: rotate 20s infinite linear;
-    background: linear-gradient(rgba(235, 173, 1, 0.356),rgba(219, 214, 214, 0.359)),
-    url(misc/earthimage.jpg ) repeat-x; 
-    background-size: cover; 
-    transform: scaleZ(50%);
-  }
-  
-  @media only screen and (max-width: 500px) {
-    .earth {
-      min-width: 50vh;
-      min-height: 50vh;
-    }
-  }
-  
   @keyframes rotate {
     0% {
       background-position: 0px 0px;
